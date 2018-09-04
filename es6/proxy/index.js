@@ -3,11 +3,15 @@
 const Duck = require('./Duck.js');
 const traceMethodCalls = require('./traceMethodCalls.js');
 
+console.log('=== Duck ===');
+
 const duck = new Duck();
 console.log(`I am ${duck.name}`);
 console.log(`I am ${duck.getName()}`);
 duck.fly();
 duck.quack();
+
+console.log('=== Traced Duck ===');
 
 const tracedDuck = traceMethodCalls(duck);
 // This print the function return by proxy getter, it means function call is
