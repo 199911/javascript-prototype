@@ -2,6 +2,7 @@
 
 const Duck = require('./Duck.js');
 const traceMethodCalls = require('./traceMethodCalls.js');
+const decorateWithProxy = require('./decorateWithProxy.js');
 
 console.log('=== Duck ===');
 
@@ -21,3 +22,11 @@ console.log(`I am ${tracedDuck.name}`);
 console.log(`I am ${tracedDuck.getName()}`);
 tracedDuck.fly();
 tracedDuck.quack();
+
+console.log('=== Duck Proxy ===');
+
+const duckProxy = decorateWithProxy(duck);
+console.log(`I am ${duckProxy.name}`);
+console.log(`I am ${duckProxy.getName()}`);
+duckProxy.fly();
+duckProxy.quack();
