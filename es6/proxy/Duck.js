@@ -1,9 +1,9 @@
 class Duck {
-  construtor() {
+  constructor() {
     this.name = 'Donald';
   }
   getName() {
-    return 'Donald';
+    return this.name;
   }
   fly() {
     console.log('I am flying!');
